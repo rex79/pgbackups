@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ###########################
 ####### LOAD CONFIG #######
@@ -200,4 +200,4 @@ find $BACKUP_DIR -maxdepth 1 -mtime +$DAYS_TO_KEEP -name "*-daily" -exec rm -rf 
 perform_backups "-daily"
 
 # perform S3 sync
-aws s3 sync $BACKUP_DIR s3://$AWS_BUCKET 
+aws s3 sync $BACKUP_DIR s3://$AWS_BUCKET
